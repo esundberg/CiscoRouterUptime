@@ -34,7 +34,7 @@ do
 	
 	echo -n "$host, $ip"
 
-	seconds=`snmpwalk -Ov -v 2c -c "$community" $ip .1.3.6.1.6.3.10.2.1.3 | cut -d ' ' -f 2`
+	seconds=`snmpget -Ov -v 2c -c "$community" $ip .1.3.6.1.6.3.10.2.1.3.0 | cut -d ' ' -f 2`
 	if [ $seconds -gt 1 ]; then
 		
 		days=$(($seconds / 86400))

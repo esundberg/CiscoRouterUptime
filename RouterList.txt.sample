@@ -1,0 +1,2 @@
+MyRouter1, 192.168.1.1, SNMPKey123
+MyRouter2, 192.168.1.2, SNMPKey456
